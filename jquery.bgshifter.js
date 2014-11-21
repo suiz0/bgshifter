@@ -2,11 +2,11 @@
     $.fn.bgshifter = function(options) {
 
         var settings = $.extend({
-            'overlay_color' : '#000',
-            'base_color' : '#000',
-            'bg_class' : '',
+            "overlayColor" : '#000',
+            "baseColor" : '#000',
+            "bgClass" : '',
             'speed' : 'fast',
-            'wrapper_class' : ''
+            "wrapperClass" : ''
         }, options);
         
         return this.each(function() {
@@ -17,8 +17,8 @@
                 baseBg,
                 w = 0;
 
-            if (! settings.base_color) {
-                settings.base_color = element$.css('backgroundColor');
+            if (! settings.baseColor) {
+                settings.baseColor = element$.css('backgroundColor');
             }
 
             element$.css({
@@ -31,18 +31,18 @@
                 parseInt(element$.css('paddingLeft'), 10) +
                 parseInt(element$.css('paddingRight'), 10);
 
-            overlayBg$ = $('<div/>').addClass(settings.bg_class + ' overlay').css({
+            overlayBg$ = $('<div/>').addClass(settings.bgClass + ' overlay').css({
                 position: 'absolute',
-                backgroundColor: settings.overlay_color,
+                backgroundColor: settings.overlayColor,
                 top: '100%',
                 height: '100%',
                 width: w + 'px',
                 'z-index': '2'
             });
 
-            baseBg$ = $('<div/>').addClass(settings.bg_class).css({
+            baseBg$ = $('<div/>').addClass(settings.bgClass).css({
                 position: 'absolute',
-                backgroundColor: settings.base_color,
+                backgroundColor: settings.baseColor,
                 top: '0px',
                 height: '100%',
                 width: w + 'px',
@@ -50,7 +50,7 @@
             });
 
             wrapper$ = $('<div/>')
-                       .addClass(settings.wrapper_class)
+                       .addClass(settings.wrapperClass)
                        .css({'position':'relative',
                             'overflow': 'hidden'
                        })
@@ -68,3 +68,4 @@
         });
     };
 })(jQuery);
+
