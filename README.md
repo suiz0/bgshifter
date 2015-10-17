@@ -12,7 +12,7 @@ JQuery plugin that allows to switch with a slider like effect element's backgrou
     });
  });
  ```
- ### Options
+### Options
 | Name          | Type       | Description                                     |
 | ------------- |:----------:|------------------------------------------------:|
 | overlayColor  | string     | Overlay background color                        |
